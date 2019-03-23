@@ -1,0 +1,11 @@
+{
+  "name": "watcheosio",
+  "version": "1.0.0",
+  "description": "A simple watcher for EOSIO blockchains.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node example.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
