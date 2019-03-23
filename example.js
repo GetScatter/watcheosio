@@ -6,8 +6,8 @@ const watcher = new NodeWatcher(
 	},
 	{
 		// startingBlock:0,      // Start at last/head block
-		startingBlock:-20,    // Start at last/head block - NUMBER
-		// startingBlock:511500,   // Start at specific block
+		// startingBlock:-20,    // Start at last/head block - NUMBER
+		startingBlock:1,   // Start at specific block
 		interval:50,            // The poll interval to use. (For catching up to head block only)
 
 
@@ -50,11 +50,3 @@ const watcher = new NodeWatcher(
 	}
 );
 watcher.start();
-
-setTimeout(() => {
-	watcher.pause();
-
-	setTimeout(() => {
-		watcher.start();
-	}, 2000);
-}, 500)

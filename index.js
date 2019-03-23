@@ -28,7 +28,6 @@ class NodeWatcher {
 		this.setHeadBlock(await this.get('chain/get_info').catch(err => { throw new Error(err); }));
 		if(this.currentBlock === 0) this.currentBlock = this.headBlock;
 		if(this.currentBlock < 0) this.currentBlock = this.headBlock + this.currentBlock;
-		console.log(this.currentBlock, this.headBlock)
 		this.watch();
 		this.watchHead();
 	}
@@ -84,6 +83,8 @@ class NodeWatcher {
 					const parsers = parserKeys.filter(x => typeof this[x] === 'function');
 					parsers.map(parser => {
 						this[parser]({
+							cpu_usage:x.cpu_usage_us,
+							transactionId:x.trx.id,
 							data:act.data,
 							contract:act.account,
 							action:act.name,
