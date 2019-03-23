@@ -5,6 +5,10 @@
 This watcher is meant to be extremely lightweight and fast.
 It has no dependencies and is a total of around 10kb.
 
+It is best used on either the same machine as the running node, or within the local network of the node.
+
+**Note that this gets actions from `get_block` so it does not catch inlines.**
+
 ## Installation
 
 `npm i -S watcheosio`
