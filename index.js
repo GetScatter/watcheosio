@@ -84,7 +84,7 @@ class NodeWatcher {
 					parsers.map(parser => {
 						this[parser]({
 							cpu_usage:x.cpu_usage_us,
-							transactionId:x.trx.id,
+							transaction_id:x.trx.id,
 							data:act.data,
 							contract:act.account,
 							action:act.name,
