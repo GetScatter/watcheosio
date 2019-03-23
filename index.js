@@ -78,6 +78,9 @@ class NodeWatcher {
 
 		if(transactions.length){
 			transactions.map(x => {
+				if(!x.trx.hasOwnProperty('transaction')) return;
+				if(!x.trx.transaction.hasOwnProperty('actions')) return;
+				if(!x.trx.transaction.actions.length) return;
 				x.trx.transaction.actions.map(act => {
 					const parserKeys = ['*', `*::${act.name}`, `${act.account}::*`, `${act.account}::${act.name}`]
 					const parsers = parserKeys.filter(x => typeof this[x] === 'function');
