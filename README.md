@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/watcheosio.svg)](https://badge.fury.io/js/watcheosio)
+
 # Watcher for EOSIO blockchains
 
 This watcher is meant to be extremely lightweight and fast.
