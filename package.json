@@ -1,6 +1,6 @@
 {
   "name": "watcheosio",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple watcher for EOSIO blockchains.",
   "main": "index.js",
   "scripts": {

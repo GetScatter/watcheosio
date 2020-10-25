@@ -109,7 +109,7 @@ class NodeWatcher {
 		const iterate = () => setTimeout(() => this.watch(), this.headBlock - this.currentBlock < 0 ? 500 : this.interval);
 
 		if(this.currentBlock > this.headBlock || this.paused) return iterate();
-		await this.parseBlock(this.currentBlock);
+		this.parseBlock(this.currentBlock);
 		this.currentBlock++;
 		iterate();
 	}
